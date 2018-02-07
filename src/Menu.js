@@ -10,9 +10,9 @@ import { Popper } from 'react-popper';
 import Portal from 'react-travel';
 import classnames from 'classnames';
 
-import Paper from 'material-ui/Paper';
-import { withStyles } from 'material-ui/styles';
-import zIndex from 'material-ui/styles/zIndex';
+import Paper from 'material-ui-next/Paper';
+import { withStyles } from 'material-ui-next/styles';
+import zIndex from 'material-ui-next/styles/zIndex';
 
 const styles = theme => ({
   keyboardFocused: {
@@ -74,7 +74,7 @@ class MuiVirtualList extends Component {
 
     const virtualListProps = getVirtualListProps && getVirtualListProps({ downshiftProps });
     const rowHeight = (virtualListProps && virtualListProps.rowHeight) ? virtualListProps.rowHeight : this.cache.rowHeight;
-    const useCellMeasurer = !(virtualListProps && virtualListProps.rowHeight); 
+    const useCellMeasurer = !(virtualListProps && virtualListProps.rowHeight);
 
     // console.log('items.length', items && items.length);
 
@@ -125,7 +125,7 @@ class MuiVirtualList extends Component {
           // Convenience helper to simplify standard usage
           const getItemProps = props => downshiftProps.getItemProps({ item, index, className, ...props })
           return getListItem({ getItemProps, item, index, downshiftProps });
-        }}  
+        }}
         onRowsRendered={onRowsRendered}
         {...useCellMeasurer && { deferredMeasurementCache: this.cache }}
         ref={el => {

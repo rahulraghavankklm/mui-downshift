@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { all as starwarsNames } from 'starwars-names';
-import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui/List';
+import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui-next/List';
 
 import MuiDownshift from '../src';
 import MockFetch from './components/MockFetch';
@@ -64,7 +64,7 @@ storiesOf('Fetch', module)
   ))
 
   .add('infinte loading', () => (
-    <MockFetch items={items} url="https://example.com/?startIndex=0&stopIndex=20" 
+    <MockFetch items={items} url="https://example.com/?startIndex=0&stopIndex=20"
       onDataChange={(newData, currentData = { total: 0, items: [] }) => {
         return { total: newData.total, items: [...currentData.items, ...newData.items] }
       }}
@@ -119,7 +119,7 @@ storiesOf('Fetch', module)
   ))
 
   .add('paginated loading', () => (
-    <MockFetch items={items} url="https://example.com/?startIndex=0&stopIndex=10" 
+    <MockFetch items={items} url="https://example.com/?startIndex=0&stopIndex=10"
       onDataChange={(newData, currentData = { total: 0, items: [] }) => {
         return { total: newData.total, items: [...currentData.items, ...newData.items] }
       }}

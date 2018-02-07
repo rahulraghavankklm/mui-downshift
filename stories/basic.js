@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Avatar from 'material-ui/Avatar';
+import Avatar from 'material-ui-next/Avatar';
 import PersonIcon from 'material-ui-icons/Person';
-import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui/List';
+import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui-next/List';
 
 import MuiDownshift from '../src';
 import StarWarsSelect from './components/StarWarsSelect';
@@ -257,7 +257,7 @@ storiesOf('VirtualList', module)
         </ListItem>
       )}
       getVirtualListProps={() => ({
-        rowHeight: ({ index }) => index % 2 ? 72 : 48 
+        rowHeight: ({ index }) => index % 2 ? 72 : 48
       })}
       onChange={action('onChange')}
     />

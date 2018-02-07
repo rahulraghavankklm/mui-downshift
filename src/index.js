@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import { Manager, Target, Popper } from 'react-popper';
-import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui/List';
+import { ListItem, ListItemText, ListItemIcon, ListItemAvatar } from 'material-ui-next/List';
 
 import Input from './Input';
 import Menu from './Menu';
@@ -76,7 +76,7 @@ class MuiDownshift extends Component {
                   />
                 </Target>
 
-                <Menu 
+                <Menu
                   items={items}
                   getListItem={getListItem}
                   showEmpty={showEmpty}

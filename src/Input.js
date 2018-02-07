@@ -1,11 +1,11 @@
 import React from 'react';
 
-import TextField from 'material-ui/TextField';
-import { FormControl, FormHelperText } from 'material-ui/Form';
-import MuiInput, { InputLabel, InputAdornment } from 'material-ui/Input';
-import { LinearProgress } from 'material-ui/Progress';
+import TextField from 'material-ui-next/TextField';
+import { FormControl, FormHelperText } from 'material-ui-next/Form';
+import MuiInput, { InputLabel, InputAdornment } from 'material-ui-next/Input';
+import { LinearProgress } from 'material-ui-next/Progress';
 
-import IconButton from 'material-ui/IconButton';
+import IconButton from 'material-ui-next/IconButton';
 import ArrowDropDown from 'material-ui-icons/ArrowDropDown';
 import ArrowDropUp from 'material-ui-icons/ArrowDropUp';
 import Cancel from 'material-ui-icons/Cancel';
@@ -24,7 +24,7 @@ function Input({ getInputProps, loading, downshiftProps }) {
                 <Cancel />
               </IconButton>
             )}
-    
+
             { !disabled && (
               <IconButton onClick={downshiftProps.toggleMenu}>
                 {downshiftProps.isOpen ? <ArrowDropUp /> : <ArrowDropDown />}
